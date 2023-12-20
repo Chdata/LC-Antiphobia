@@ -57,3 +57,4 @@ E:\Stuff\LethalCompany\MyLethalCompanyMods\Antiphobia\AntiphobiaMod\bin\Release\
 E:\Stuff\LethalCompany\MyLethalCompanyMods\Antiphobia\AntiphobiaMod\bin\Release\netstandard2.1\Newtonsoft.Json.dll
 E:\Stuff\LethalCompany\MyLethalCompanyMods\Antiphobia\AntiphobiaMod\bin\Release\netstandard2.1\Unity.Profiling.Core.dll
 E:\Stuff\LethalCompany\MyLethalCompanyMods\Antiphobia\AntiphobiaMod\obj\Release\netstandard2.1\AntiphobiaMod.csproj.CopyComplete
+E:\Stuff\LethalCompany\MyLethalCompanyMods\Antiphobia\AntiphobiaMod\obj\Release\netstandard2.1\AntiphobiaMod.sourcelink.json

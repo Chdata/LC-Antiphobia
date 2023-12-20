@@ -37,7 +37,7 @@ namespace AntiphobiaMod.Patches
         }
 
 
-        [HarmonyPatch(typeof(RoundManager), nameof(RoundManager.LoadNewLevel))]
+        /*[HarmonyPatch(typeof(RoundManager), nameof(RoundManager.LoadNewLevel))]
         [HarmonyPrefix]
         static bool OnLoadNewLevel(ref SelectableLevel newLevel)
         {
@@ -82,6 +82,6 @@ namespace AntiphobiaMod.Patches
                     break;
                 }
             }
-        }
+        }*/
     }
 }
