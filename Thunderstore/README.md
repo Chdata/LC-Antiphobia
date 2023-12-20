@@ -15,7 +15,7 @@ Remember your mod manager can open that config in the Config Editor!
 The "antiphobia.assetbundle" file belongs in the same folder as "Antiphobia.dll". It contains the model and sounds.
 
 # Contact
-You can find me on the Lethal Company Modding Discord. <link>
+You can find me on the Lethal Company Modding Discord. https://discord.com/channels/1168655651455639582/1187139195387523185
 
 Twitter: https://twitter.com/Chdata
 
