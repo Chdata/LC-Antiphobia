@@ -2689,11 +2689,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Stuff\\LethalCompany\\MyLethalCompanyMods\\Antiphobia\\LethalCompanyTemplate\\Antiphobia.csproj",
+      "projectUniqueName": "E:\\Stuff\\LethalCompany\\MyLethalCompanyMods\\Antiphobia\\AntiphobiaMod\\AntiphobiaMod.csproj",
       "projectName": "Antiphobia",
-      "projectPath": "E:\\Stuff\\LethalCompany\\MyLethalCompanyMods\\Antiphobia\\LethalCompanyTemplate\\Antiphobia.csproj",
+      "projectPath": "E:\\Stuff\\LethalCompany\\MyLethalCompanyMods\\Antiphobia\\AntiphobiaMod\\AntiphobiaMod.csproj",
       "packagesPath": "C:\\Users\\Anne Ominous\\.nuget\\packages\\",
-      "outputPath": "E:\\Stuff\\LethalCompany\\MyLethalCompanyMods\\Antiphobia\\LethalCompanyTemplate\\obj\\",
+      "outputPath": "E:\\Stuff\\LethalCompany\\MyLethalCompanyMods\\Antiphobia\\AntiphobiaMod\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "E:\\Stuff\\LethalCompany\\MyLethalCompanyMods\\Antiphobia\\NuGet.Config",

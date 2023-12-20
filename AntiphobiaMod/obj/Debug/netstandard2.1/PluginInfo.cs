@@ -1,4 +1,4 @@
-namespace Antiphobia
+namespace AntiphobiaMod
 {
     public static class PluginInfo
     {

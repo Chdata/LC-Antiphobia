@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Wr/xdDiVPL67SH3f/FanctgI8idttB4+qiS/sHLurZ78xETgwzRmHG/PJBX3PbFotocN92Xf0BFh8Sy7JXnENw==",
+  "dgSpecHash": "AGd7ijBkSf93H9NVwixYMR6d78SlOMrUQxCoawrL3y9qIvSCCttjcSdIH/RY0MosHM/9rrE2rFL08k0QaWtyLQ==",
   "success": true,
-  "projectFilePath": "E:\\Stuff\\LethalCompany\\MyLethalCompanyMods\\Antiphobia\\LethalCompanyTemplate\\Antiphobia.csproj",
+  "projectFilePath": "E:\\Stuff\\LethalCompany\\MyLethalCompanyMods\\Antiphobia\\AntiphobiaMod\\AntiphobiaMod.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anne Ominous\\.nuget\\packages\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
     "C:\\Users\\Anne Ominous\\.nuget\\packages\\bepinex.baselib\\5.4.20\\bepinex.baselib.5.4.20.nupkg.sha512",

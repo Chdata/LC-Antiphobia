@@ -1,0 +1,6 @@
+E:\Stuff\LethalCompany\MyLethalCompanyMods\Antiphobia\LethalCompanyTemplate\obj\Release\netstandard2.1\Antiphobia.csproj.AssemblyReference.cache
+E:\Stuff\LethalCompany\MyLethalCompanyMods\Antiphobia\LethalCompanyTemplate\obj\Release\netstandard2.1\PluginInfo.cs
+E:\Stuff\LethalCompany\MyLethalCompanyMods\Antiphobia\LethalCompanyTemplate\obj\Release\netstandard2.1\Antiphobia.GeneratedMSBuildEditorConfig.editorconfig
+E:\Stuff\LethalCompany\MyLethalCompanyMods\Antiphobia\LethalCompanyTemplate\obj\Release\netstandard2.1\Antiphobia.AssemblyInfoInputs.cache
+E:\Stuff\LethalCompany\MyLethalCompanyMods\Antiphobia\LethalCompanyTemplate\obj\Release\netstandard2.1\Antiphobia.AssemblyInfo.cs
+E:\Stuff\LethalCompany\MyLethalCompanyMods\Antiphobia\LethalCompanyTemplate\obj\Release\netstandard2.1\Antiphobia.csproj.CoreCompileInputs.cache

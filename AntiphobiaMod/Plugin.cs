@@ -8,7 +8,7 @@ namespace AntiphobiaMod
         private void Awake()
         {
             // Plugin startup logic
-            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+            Logger.LogInfo($"Chdata's {PluginInfo.PLUGIN_GUID} mod is loaded!");
         }
     }
 }
