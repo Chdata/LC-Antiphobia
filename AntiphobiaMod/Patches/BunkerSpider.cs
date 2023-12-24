@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace AntiphobiaMod.Patches
 {
-    internal class BunkerSpider
+    internal class BunkerSpiderPatch
     {
         [HarmonyPatch(typeof(SandSpiderAI), "Start")]
         [HarmonyPostfix]
@@ -37,7 +37,7 @@ namespace AntiphobiaMod.Patches
         }
 
 
-        /*[HarmonyPatch(typeof(RoundManager), nameof(RoundManager.LoadNewLevel))]
+        [HarmonyPatch(typeof(RoundManager), nameof(RoundManager.LoadNewLevel))]
         [HarmonyPrefix]
         static bool OnLoadNewLevel(ref SelectableLevel newLevel)
         {
@@ -51,6 +51,10 @@ namespace AntiphobiaMod.Patches
                 return true;
             }
 
+            Plugin.turretModeLastFrameDict.Clear();
+            Plugin.turretBerserkTimerDict.Clear();
+            Plugin.turretEnteringBerserkModeDict.Clear();
+
             var nl = newLevel;
 
             var enemyComponentRarity = new Dictionary<Type, int>();
@@ -58,9 +62,10 @@ namespace AntiphobiaMod.Patches
 
             nl.maxEnemyPowerCount = 100;
             enemyComponentRarity.Add(typeof(SandSpiderAI), 99999);
+            enemyComponentRarity.Add(typeof(NutcrackerEnemyAI), 99999);
             UpdateRarity(newLevel.Enemies, enemyComponentRarity);
 
-            Plugin.Logger.LogInfo("Increased Max Power Counter and Bunker Spider Spawns");
+            Plugin.Logger.LogInfo("Increased Max Power Counter and Enemy Spawns");
 
             newLevel = nl;
 
@@ -82,6 +87,6 @@ namespace AntiphobiaMod.Patches
                     break;
                 }
             }
-        }*/
+        }
     }
 }

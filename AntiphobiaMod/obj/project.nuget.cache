@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "AGd7ijBkSf93H9NVwixYMR6d78SlOMrUQxCoawrL3y9qIvSCCttjcSdIH/RY0MosHM/9rrE2rFL08k0QaWtyLQ==",
+  "dgSpecHash": "U+fqKZgYrglrNCb7jzczA/tuSMAaM/5MfemrtKq2tZFsjj9rWFl0lHaaOAtqc0BHqt8uL+k2TaV8OQsaGTXl+A==",
   "success": true,
   "projectFilePath": "E:\\Stuff\\LethalCompany\\MyLethalCompanyMods\\Antiphobia\\AntiphobiaMod\\AntiphobiaMod.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anne Ominous\\.nuget\\packages\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
+    "C:\\Users\\Anne Ominous\\.nuget\\packages\\bepinex.assemblypublicizer.msbuild\\0.4.1\\bepinex.assemblypublicizer.msbuild.0.4.1.nupkg.sha512",
     "C:\\Users\\Anne Ominous\\.nuget\\packages\\bepinex.baselib\\5.4.20\\bepinex.baselib.5.4.20.nupkg.sha512",
     "C:\\Users\\Anne Ominous\\.nuget\\packages\\bepinex.core\\5.4.21\\bepinex.core.5.4.21.nupkg.sha512",
     "C:\\Users\\Anne Ominous\\.nuget\\packages\\bepinex.plugininfoprops\\1.1.0\\bepinex.plugininfoprops.1.1.0.nupkg.sha512",

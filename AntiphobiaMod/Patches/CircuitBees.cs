@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace AntiphobiaMod.Patches
 {
-    internal class CircuitBees
+    internal class CircuitBeesPatch
     {
         [HarmonyPatch(typeof(RedLocustBees), "Start")]
         [HarmonyPostfix]
@@ -18,15 +18,28 @@ namespace AntiphobiaMod.Patches
             //     SetupMelissophobiaMode(__instance);
             // }
 
-            if (Plugin.configTrypophobiaMode.Value)
+            switch (Plugin.configTrypophobiaMode.Value)
             {
-                SetupTrypophobiaMode(__instance);
+                case 1:
+                {
+                    __instance.hive.gameObject.GetComponent<MeshRenderer>().material = Plugin.beeHiveMaterial;
+                    break;
+                }
+                case 2:
+                {
+                    CreatePopcornAndParentTo(__instance.hive.transform);
+                    __instance.hive.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    break;
+                }
             }
         }
 
-        private static void SetupTrypophobiaMode(RedLocustBees theBees)
+        private static void CreatePopcornAndParentTo(Transform parentModel)
         {
-            theBees.hive.gameObject.GetComponent<MeshRenderer>().material = Plugin.beeHiveMaterial;
+            GameObject childObject = Object.Instantiate<GameObject>(Plugin.beeHivePopcorn);
+            childObject.transform.SetParent(parentModel);
+            childObject.transform.localPosition = Vector3.zero;
+            childObject.transform.localRotation = Quaternion.identity;
         }
 
         // private static void SetupMelissophobiaMode(RedLocustBees theBees)

@@ -24,6 +24,7 @@ Twitter: https://twitter.com/Chdata
 - ~~Melissophobia Mode (Fear of bees)~~
 - Cynophobia Mode (Fear of dogs)
 - Ornithophobia Mode (Fear of birds)
+- ~~Hippopotomonstrosesquippedaliophobia Mode (Fear of Long Words)~~
 
 I plan to develop this to a certain point that will hopefully work without needing too much maintenance, and then move on to other projects.
 

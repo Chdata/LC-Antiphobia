@@ -11,11 +11,12 @@
 using System;
 using System.Reflection;
 
+[assembly: System.Runtime.CompilerServices.IgnoresAccessChecksToAttribute("Assembly-CSharp")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Antiphobia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Chdata\'s Antiphobia Mod")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46f99ae8d17f831f6740544de36aea21ec6acdb8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85817cc5a53faba7f10ff715bb1f6d78d3382900")]
 [assembly: System.Reflection.AssemblyProductAttribute("Antiphobia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Antiphobia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
