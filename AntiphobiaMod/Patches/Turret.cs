@@ -16,36 +16,30 @@ namespace AntiphobiaMod.Patches
                 return;
             }
 
-            var t1 = __instance;
-            var t2 = __instance.gameObject;
-            var t3 = __instance.gameObject.transform;
-
-            Plugin.Logger.LogInfo($"--=== Fixing Turret 1 - " +
-                $"\n1: {t1} " +
-                $"\n2: {t2} " +
-                $"\n3: {t3} " +
-                $"\n4: {__instance.gameObject.transform.Find("MeshContainer")} " +
-                $"\n5: {__instance.gameObject.transform.parent}" +
-                $"\n5: {__instance.gameObject.transform.parent.Find("MeshContainer")}" +
-                $"\n0: The end " +
-                $"... ===--");
+            // var t1 = __instance;
+            // var t2 = __instance.gameObject;
+            // var t3 = __instance.gameObject.transform;
+            // 
+            // Plugin.Logger.LogInfo($"--=== Fixing Turret 1 - " +
+            //     $"\n1: {t1} " +
+            //     $"\n2: {t2} " +
+            //     $"\n3: {t3} " +
+            //     $"\n4: {__instance.gameObject.transform.Find("MeshContainer")} " +
+            //     $"\n5: {__instance.gameObject.transform.parent}" +
+            //     $"\n5: {__instance.gameObject.transform.parent.Find("MeshContainer")}" +
+            //     $"\n0: The end " +
+            //     $"... ===--");
 
             Plugin.turretModeLastFrameDict.Add(__instance.NetworkObjectId, TurretMode.Detection);
             Plugin.turretBerserkTimerDict.Add(__instance.NetworkObjectId, 0f);
             Plugin.turretEnteringBerserkModeDict.Add(__instance.NetworkObjectId, false);
 
-            Plugin.Logger.LogInfo("--=== Fixing Turret 2... ===--");
-
             Transform turretGunBody = __instance.gameObject.transform.parent.Find("MeshContainer").Find("RotatingRodContainer").Find("Rod").Find("GunBody");
-
-            Plugin.Logger.LogInfo("--=== Fixing Turret 3... ===--");
 
             if (turretGunBody == null)
             {
                 Plugin.Logger.LogInfo("--=== Failed Turret... ===--");
             }
-
-            Plugin.Logger.LogInfo("--=== Fixing Turret 4... ===--");
 
             turretGunBody.GetComponent<MeshRenderer>().enabled = false;
             turretGunBody.Find("Magazine").GetComponent<MeshRenderer>().enabled = false;
@@ -57,7 +51,6 @@ namespace AntiphobiaMod.Patches
             {
                 Plugin.Logger.LogInfo("--=== Failed Turret Particles... ===--");
             }
-
 
             var trailRenderer = gunParticles.trails;
             trailRenderer.enabled = false;
@@ -76,8 +69,6 @@ namespace AntiphobiaMod.Patches
             curve.AddKey(0.0f, 0.0f);
             flareRenderer.size = new ParticleSystem.MinMaxCurve(0.0f, curve);
 
-            Plugin.Logger.LogInfo("--=== Fixing Turret 5... ===--");
-
             CreateBasscannonAndParentTo(__instance, turretGunBody);
 
             Plugin.Logger.LogInfo("--=== Reformed Turret... ===--");
@@ -95,7 +86,7 @@ namespace AntiphobiaMod.Patches
 
             Plugin.basscannonParticleDict[__instance.NetworkObjectId].transform.SetParent(parentModel.parent, worldPositionStays: true);
 
-            Plugin.Logger.LogInfo($"--=== Basscannon: {childObject.transform.Find("roar").GetComponent<ParticleSystem>()} - ");
+            //Plugin.Logger.LogInfo($"--=== Basscannon: {childObject.transform.Find("roar").GetComponent<ParticleSystem>()} - ");
         }
 
         [HarmonyPatch(typeof(Turret), "Update")]
@@ -138,8 +129,8 @@ namespace AntiphobiaMod.Patches
                     }
                     break;
                 case TurretMode.Berserk:
-                    Plugin.Logger.LogInfo($"--=== Turret Berserk 1 Time: {Plugin.turretBerserkTimerDict[__instance.NetworkObjectId]} ===--");
-                    Plugin.Logger.LogInfo($"--=== Turret Berserk 1 Mode: {Plugin.turretEnteringBerserkModeDict[__instance.NetworkObjectId]} ===--");
+                    //Plugin.Logger.LogInfo($"--=== Turret Berserk 1 Time: {Plugin.turretBerserkTimerDict[__instance.NetworkObjectId]} ===--");
+                    //Plugin.Logger.LogInfo($"--=== Turret Berserk 1 Mode: {Plugin.turretEnteringBerserkModeDict[__instance.NetworkObjectId]} ===--");
 
                     if (Plugin.turretModeLastFrameDict[__instance.NetworkObjectId] != TurretMode.Berserk)
                     {
@@ -148,21 +139,13 @@ namespace AntiphobiaMod.Patches
 
                         Plugin.turretBerserkTimerDict[__instance.NetworkObjectId] = 1.3f;
                         Plugin.turretEnteringBerserkModeDict[__instance.NetworkObjectId] = true;
-
-                        Plugin.Logger.LogInfo($"--=== Turret Berserk 2 Time: {Plugin.turretBerserkTimerDict[__instance.NetworkObjectId]} ===--");
-                        Plugin.Logger.LogInfo($"--=== Turret Berserk 2 Mode: {Plugin.turretEnteringBerserkModeDict[__instance.NetworkObjectId]} ===--");
                     }
                     if (Plugin.turretEnteringBerserkModeDict[__instance.NetworkObjectId])
                     {
-                        Plugin.Logger.LogInfo($"--=== Turret Berserk 3 Time: {Plugin.turretBerserkTimerDict[__instance.NetworkObjectId]} ===--");
-                        Plugin.Logger.LogInfo($"--=== Turret Berserk 3 Mode: {Plugin.turretEnteringBerserkModeDict[__instance.NetworkObjectId]} ===--");
                         Plugin.turretBerserkTimerDict[__instance.NetworkObjectId] -= Time.deltaTime;
                         Plugin.turretBerserkTimerDict[__instance.NetworkObjectId] -= Time.deltaTime;
                         if (Plugin.turretBerserkTimerDict[__instance.NetworkObjectId] <= 0f)
                         {
-                            Plugin.Logger.LogInfo($"--=== Turret Berserk 4 Time: {Plugin.turretBerserkTimerDict[__instance.NetworkObjectId]} ===--");
-                            Plugin.Logger.LogInfo($"--=== Turret Berserk 4 Mode: {Plugin.turretEnteringBerserkModeDict[__instance.NetworkObjectId]} ===--");
-
                             Plugin.turretEnteringBerserkModeDict[__instance.NetworkObjectId] = false;
                             Plugin.turretBerserkTimerDict[__instance.NetworkObjectId] = 9f;
                             //GetCustomParticleSystem(__instance).Play(withChildren: true);
@@ -181,19 +164,14 @@ namespace AntiphobiaMod.Patches
 
         public static ParticleSystem GetCustomParticleSystem(Turret theTurret)
         {
-            Plugin.Logger.LogInfo("--=== Turret GetCustomParticleSystem() ===--");
+            //Plugin.Logger.LogInfo("--=== Turret GetCustomParticleSystem() ===--");
 
             //Transform turretGunBody = theTurret.gameObject.transform.parent.Find("MeshContainer").Find("RotatingRodContainer").Find("Rod").Find("GunBody");
 
-            Plugin.Logger.LogInfo($"--=== Shooting Turret - ");
-            Plugin.Logger.LogInfo($"1: {Plugin.basscannonParticleDict[theTurret.NetworkObjectId]} ");
-            //Plugin.Logger.LogInfo($"2: {turretGunBody.Find("MeshContainer")} ");
-            //Plugin.Logger.LogInfo($"3: {turretGunBody.Find("MeshContainer").Find("RotatingRodContainer").Find("Rod").Find("GunBody")} ");
-            //Plugin.Logger.LogInfo($"2: {turretGunBody.Find("Basscannon")} ");
-            //Plugin.Logger.LogInfo($"3: {turretGunBody.Find("Basscannon").Find("roar")}");
-            //Plugin.Logger.LogInfo($"4: {turretGunBody.Find("Basscannon").Find("roar").GetComponent<ParticleSystem>()}");
-            Plugin.Logger.LogInfo($"0: The end ");
-            Plugin.Logger.LogInfo($"... ===--");
+            //Plugin.Logger.LogInfo($"--=== Shooting Turret - ");
+            //Plugin.Logger.LogInfo($"1: {Plugin.basscannonParticleDict[theTurret.NetworkObjectId]} ");
+            //Plugin.Logger.LogInfo($"0: The end ");
+            //Plugin.Logger.LogInfo($"... ===--");
 
             return Plugin.basscannonParticleDict[theTurret.NetworkObjectId];
 

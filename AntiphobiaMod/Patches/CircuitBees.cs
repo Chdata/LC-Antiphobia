@@ -23,12 +23,14 @@ namespace AntiphobiaMod.Patches
                 case 1:
                 {
                     __instance.hive.gameObject.GetComponent<MeshRenderer>().material = Plugin.beeHiveMaterial;
-                    break;
+                        Plugin.Logger.LogInfo("--=== Changed to Wood! ===--");
+                        break;
                 }
                 case 2:
                 {
                     CreatePopcornAndParentTo(__instance.hive.transform);
                     __instance.hive.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    Plugin.Logger.LogInfo("--=== Changed to Popcorn! ===--");
                     break;
                 }
             }

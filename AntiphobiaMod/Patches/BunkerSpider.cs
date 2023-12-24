@@ -37,57 +37,57 @@ namespace AntiphobiaMod.Patches
         }
 
 
-        [HarmonyPatch(typeof(RoundManager), nameof(RoundManager.LoadNewLevel))]
-        [HarmonyPrefix]
-        static bool OnLoadNewLevel(ref SelectableLevel newLevel)
-        {
-            Plugin.Logger.LogInfo("Client is host: " + RoundManager.Instance.IsHost);
+        // [HarmonyPatch(typeof(RoundManager), nameof(RoundManager.LoadNewLevel))]
+        // [HarmonyPrefix]
+        // static bool OnLoadNewLevel(ref SelectableLevel newLevel)
+        // {
+        //     Plugin.Logger.LogInfo("Client is host: " + RoundManager.Instance.IsHost);
+        // 
+        //     if (!RoundManager.Instance.IsHost) return true;
+        // 
+        //     if (newLevel.levelID == 3)
+        //     {
+        //         Plugin.Logger.LogInfo("Level is company, skipping");
+        //         return true;
+        //     }
+        // 
+        //     Plugin.turretModeLastFrameDict.Clear();
+        //     Plugin.turretBerserkTimerDict.Clear();
+        //     Plugin.turretEnteringBerserkModeDict.Clear();
+        //     Plugin.basscannonParticleDict.Clear();
+        // 
+        //     var nl = newLevel;
+        // 
+        //     var enemyComponentRarity = new Dictionary<Type, int>();
+        //     enemyComponentRarity.Clear();
+        // 
+        //     nl.maxEnemyPowerCount = 100;
+        //     enemyComponentRarity.Add(typeof(SandSpiderAI), 99999);
+        //     enemyComponentRarity.Add(typeof(NutcrackerEnemyAI), 99999);
+        //     UpdateRarity(newLevel.Enemies, enemyComponentRarity);
+        // 
+        //     Plugin.Logger.LogInfo("Increased Max Power Counter and Enemy Spawns");
+        // 
+        //     newLevel = nl;
+        // 
+        //     return true;
+        // }
 
-            if (!RoundManager.Instance.IsHost) return true;
-
-            if (newLevel.levelID == 3)
-            {
-                Plugin.Logger.LogInfo("Level is company, skipping");
-                return true;
-            }
-
-            Plugin.turretModeLastFrameDict.Clear();
-            Plugin.turretBerserkTimerDict.Clear();
-            Plugin.turretEnteringBerserkModeDict.Clear();
-            Plugin.basscannonParticleDict.Clear();
-
-            var nl = newLevel;
-
-            var enemyComponentRarity = new Dictionary<Type, int>();
-            enemyComponentRarity.Clear();
-
-            nl.maxEnemyPowerCount = 100;
-            enemyComponentRarity.Add(typeof(SandSpiderAI), 99999);
-            enemyComponentRarity.Add(typeof(NutcrackerEnemyAI), 99999);
-            UpdateRarity(newLevel.Enemies, enemyComponentRarity);
-
-            Plugin.Logger.LogInfo("Increased Max Power Counter and Enemy Spawns");
-
-            newLevel = nl;
-
-            return true;
-        }
-
-        private static void UpdateRarity(List<SpawnableEnemyWithRarity> enemies, Dictionary<Type, int> componentRarity)
-        {
-            if (componentRarity.Count <= 0) return;
-
-            foreach (var unit in enemies)
-            {
-                foreach (var componentRarityPair in componentRarity)
-                {
-                    if (unit.enemyType.enemyPrefab.GetComponent(componentRarityPair.Key) == null)
-                        continue;
-                    unit.rarity = componentRarityPair.Value;
-                    componentRarity.Remove(componentRarityPair.Key);
-                    break;
-                }
-            }
-        }
+        // private static void UpdateRarity(List<SpawnableEnemyWithRarity> enemies, Dictionary<Type, int> componentRarity)
+        // {
+        //     if (componentRarity.Count <= 0) return;
+        // 
+        //     foreach (var unit in enemies)
+        //     {
+        //         foreach (var componentRarityPair in componentRarity)
+        //         {
+        //             if (unit.enemyType.enemyPrefab.GetComponent(componentRarityPair.Key) == null)
+        //                 continue;
+        //             unit.rarity = componentRarityPair.Value;
+        //             componentRarity.Remove(componentRarityPair.Key);
+        //             break;
+        //         }
+        //     }
+        // }
     }
 }
