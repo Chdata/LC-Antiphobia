@@ -4,6 +4,7 @@
 # Features:
 - Fixed Arachnophobia Mode (Removes the spider's fangs floating with the text)
 - Trypophobia Mode (Fear or disgust of a pattern of holes - replaced texture on Circuit Beehive)
+- Hoplophobia Mode (Fear of firearms - replaced turrets and shotguns)
 
 # Installation Instructions
 Use your favorite mod manager to install!
@@ -14,16 +15,17 @@ Remember your mod manager can open that config in the Config Editor!
 
 The "antiphobia.assetbundle" file belongs in the same folder as "Antiphobia.dll". It contains the model and sounds.
 
+Check out the config file for options to toggle each mode!
+
 # Contact
 You can find me on the Lethal Company Modding Discord. https://discord.com/channels/1168655651455639582/1187139195387523185
 
 Twitter: https://twitter.com/Chdata
 
 # Planned Features:
-- Hoplophobia Mode (Fear of firearms)
 - ~~Melissophobia Mode (Fear of bees)~~
-- Cynophobia Mode (Fear of dogs)
-- Ornithophobia Mode (Fear of birds)
+- ~~Cynophobia Mode (Fear of dogs)~~
+- ~~Ornithophobia Mode (Fear of birds)~~
 - ~~Hippopotomonstrosesquippedaliophobia Mode (Fear of Long Words)~~
 
 I plan to develop this to a certain point that will hopefully work without needing too much maintenance, and then move on to other projects.
@@ -32,7 +34,7 @@ I plan to develop this to a certain point that will hopefully work without needi
 Q. Will you add X phobia mode?
 A. Tell me about it on Discord in the unofficial Lethal Company modding community, and I will consider it.
 
-But I will not guarantee it, because I work full time.
+I probably won't do it though. I need to move on to other mods with my limited free time.
 
 Q. Why no Melissophobia Mode?
 A. I wanted add it, but I couldn't figure out how to change the bee's graphics through mods.
@@ -43,3 +45,6 @@ A. I wanted add it, but I couldn't figure out how to change the bee's graphics t
 # Credits
 Thanks to the Lethal Company Modding Discord for teaching me the ropes!
 https://discord.gg/v5t3KkEdsv
+
+Thanks to Charlie Tinley for the trumpet model!
+https://sketchfab.com/3d-models/trumpet-3f2d4f5b962340b2933012e1bc634d88

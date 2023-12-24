@@ -1,6 +1,6 @@
 {
   "name": "AntiphobiaMod",
-  "version_number": "1.0.1",
+  "version_number": "1.0.2",
   "website_url": "https://github.com/Chdata/LC-Antiphobia",
   "description": "Replaces sounds and graphics in the game for trypophobia and fixes the floating spider parts in arachnophobia mode.",
   "dependencies": [

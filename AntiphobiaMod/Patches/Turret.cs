@@ -89,7 +89,7 @@ namespace AntiphobiaMod.Patches
             childObject.transform.SetParent(parentModel);
             childObject.transform.localPosition = Vector3.zero;
             childObject.transform.localRotation = Quaternion.Euler(-90f, -90f, 0f);
-            childObject.transform.Find("roar").transform.localRotation = Quaternion.Euler(0f, -2.75f, 0f);
+            childObject.transform.Find("roar").transform.localRotation = Quaternion.Euler(0f, -3.75f, 0f);
 
             Plugin.basscannonParticleDict.Add(__instance.NetworkObjectId, childObject.transform.Find("roar").GetComponent<ParticleSystem>());
 
