@@ -54,6 +54,7 @@ namespace AntiphobiaMod.Patches
             Plugin.turretModeLastFrameDict.Clear();
             Plugin.turretBerserkTimerDict.Clear();
             Plugin.turretEnteringBerserkModeDict.Clear();
+            Plugin.basscannonParticleDict.Clear();
 
             var nl = newLevel;
 

@@ -47,6 +47,7 @@ namespace AntiphobiaMod
         public static readonly Dictionary<ulong, TurretMode> turretModeLastFrameDict = [];
         public static readonly Dictionary<ulong, float> turretBerserkTimerDict = [];
         public static readonly Dictionary<ulong, bool> turretEnteringBerserkModeDict = [];
+        public static readonly Dictionary<ulong, ParticleSystem> basscannonParticleDict = [];
 
         private void Awake()
         {

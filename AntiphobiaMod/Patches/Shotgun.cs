@@ -21,7 +21,32 @@ namespace AntiphobiaMod.Patches
             Transform gunMuzzle = __instance.gameObject.transform.Find("GunBarrel");
             Transform gunBarrel = __instance.gameObject.transform.Find("GunHandleLOD1");
 
-            __instance.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
+            HideShotgunGraphics(__instance);
+
+            CreateTrumpetHornAndParentTo(gunMuzzle);
+            CreateTrumpetBarrelAndParentTo(gunBarrel);
+        }
+
+        [HarmonyPatch(typeof(ShotgunItem), "EquipItem")]
+        [HarmonyPostfix]
+        public static void OnShotgunEquipItem(ShotgunItem __instance)
+        {
+            HideShotgunGraphics(__instance);
+        }
+
+        [HarmonyPatch(typeof(ShotgunItem), "DiscardItem")]
+        [HarmonyPostfix]
+        public static void OnShotgunDiscardItem(ShotgunItem __instance)
+        {
+            HideShotgunGraphics(__instance);
+        }
+
+        private static void HideShotgunGraphics(ShotgunItem theShotgun)
+        {
+            Transform gunMuzzle = theShotgun.gameObject.transform.Find("GunBarrel");
+            Transform gunBarrel = theShotgun.gameObject.transform.Find("GunHandleLOD1");
+
+            theShotgun.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
             gunMuzzle.GetComponent<MeshRenderer>().enabled = false;
             gunMuzzle.Find("GunBarrelLOD1").GetComponent<MeshRenderer>().enabled = false;
             gunBarrel.GetComponent<MeshRenderer>().enabled = false;
@@ -35,12 +60,9 @@ namespace AntiphobiaMod.Patches
             ParticleSystem flareParticles = gunMuzzle.Find("GunShootRayPoint").Find("BulletParticle").Find("BulletParticleFlare").GetComponent<ParticleSystem>();
             var flareRenderer = flareParticles.sizeOverLifetime;
 
-            AnimationCurve curve = new AnimationCurve();
+            AnimationCurve curve = new();
             curve.AddKey(0.0f, 0.0f);
             flareRenderer.size = new ParticleSystem.MinMaxCurve(0.0f, curve);
-
-            CreateTrumpetHornAndParentTo(gunMuzzle);
-            CreateTrumpetBarrelAndParentTo(gunBarrel);
         }
 
         private static void CreateTrumpetHornAndParentTo(Transform parentModel)
