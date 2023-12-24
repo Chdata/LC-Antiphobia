@@ -108,24 +108,24 @@ namespace AntiphobiaMod.Patches
                 case TurretMode.Detection:
                     if (Plugin.turretModeLastFrameDict[__instance.NetworkObjectId] != TurretMode.Detection)
                     {
-                        Plugin.Logger.LogInfo("--=== Turret Detection ===--");
+                        //Plugin.Logger.LogInfo("--=== Turret Detection ===--");
                         Plugin.turretModeLastFrameDict[__instance.NetworkObjectId] = TurretMode.Detection;
                         //GetCustomParticleSystem(__instance).Stop(withChildren: true, ParticleSystemStopBehavior.StopEmitting);
                         GetCustomParticleSystem(__instance).gameObject.SetActive(false);
-                        Plugin.Logger.LogInfo("--=== Turret Detected ===--");
+                        //Plugin.Logger.LogInfo("--=== Turret Detected ===--");
                     }
                     break;
                 case TurretMode.Firing:
                     if (Plugin.turretModeLastFrameDict[__instance.NetworkObjectId] != TurretMode.Firing)
                     {
-                        Plugin.Logger.LogInfo("--=== Turret Firing ===--");
+                        //Plugin.Logger.LogInfo("--=== Turret Firing ===--");
                         Plugin.turretModeLastFrameDict[__instance.NetworkObjectId] = TurretMode.Firing;
 
-                        Plugin.Logger.LogInfo("--=== Turret Fire Test ===--");
+                        //Plugin.Logger.LogInfo("--=== Turret Fire Test ===--");
 
                         GetCustomParticleSystem(__instance).gameObject.SetActive(true);
                         //GetCustomParticleSystem(__instance).Play(withChildren: true);
-                        Plugin.Logger.LogInfo("--=== Turret Fired ===--");
+                        //Plugin.Logger.LogInfo("--=== Turret Fired ===--");
                     }
                     break;
                 case TurretMode.Berserk:
@@ -134,7 +134,7 @@ namespace AntiphobiaMod.Patches
 
                     if (Plugin.turretModeLastFrameDict[__instance.NetworkObjectId] != TurretMode.Berserk)
                     {
-                        Plugin.Logger.LogInfo("--=== Turret Berserk ===--");
+                        //Plugin.Logger.LogInfo("--=== Turret Berserk ===--");
                         Plugin.turretModeLastFrameDict[__instance.NetworkObjectId] = TurretMode.Berserk;
 
                         Plugin.turretBerserkTimerDict[__instance.NetworkObjectId] = 1.3f;
@@ -155,7 +155,7 @@ namespace AntiphobiaMod.Patches
                     }
                     if (__instance.IsServer)
                     {
-                        Plugin.Logger.LogInfo("--=== Turret Server ===--");
+                        //Plugin.Logger.LogInfo("--=== Turret Server ===--");
                         Plugin.turretBerserkTimerDict[__instance.NetworkObjectId] -= Time.deltaTime;
                     }
                     break;

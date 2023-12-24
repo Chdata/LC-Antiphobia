@@ -3,8 +3,14 @@
 
 # Features:
 - Fixed Arachnophobia Mode (Removes the spider's fangs floating with the text)
-- Trypophobia Mode (Fear or disgust of a pattern of holes - replaces texture on Circuit Beehive)
-- Hoplophobia Mode (Severe anxiety towards firearms - replaces turrets and shotguns)
+- Trypophobia Mode (Fear or disgust of a pattern of holes - replaces texture on Circuit Beehive with wood or replaces the model with popcorn)
+- Hoplophobia Mode (Severe anxiety towards firearms - replaces turrets and shotguns with basscannons and trumpets)
+
+Check out the preview videos!
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/p74NU7o28z4/0.jpg)](http://www.youtube.com/watch?v=p74NU7o28z4 "Nutcracker Trumpets")
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/4um9Q6Quzok/0.jpg)](http://www.youtube.com/watch?v=4um9Q6Quzok "Basscannon Turrets")
 
 # Installation Instructions
 Use your favorite mod manager to install!
@@ -48,3 +54,15 @@ https://discord.gg/v5t3KkEdsv
 
 Thanks to Charlie Tinley for the trumpet model!
 https://sketchfab.com/3d-models/trumpet-3f2d4f5b962340b2933012e1bc634d88
+
+	- v1.0.3
+		- Update Readme
+
+	- v1.0.2
+		- Added Basscannon Turret and Nutcracker Trumpets for Hoplophobia Mode
+
+	- v1.0.1
+		- Update Readme
+
+	- v1.0.0
+		- Release
