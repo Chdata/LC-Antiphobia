@@ -21,6 +21,7 @@ namespace AntiphobiaMod.Patches
             Transform gunMuzzle = __instance.gameObject.transform.Find("GunBarrel");
             Transform gunBarrel = __instance.gameObject.transform.Find("GunHandleLOD1");
 
+            __instance.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
             gunMuzzle.GetComponent<MeshRenderer>().enabled = false;
             gunMuzzle.Find("GunBarrelLOD1").GetComponent<MeshRenderer>().enabled = false;
             gunBarrel.GetComponent<MeshRenderer>().enabled = false;
@@ -47,15 +48,15 @@ namespace AntiphobiaMod.Patches
             GameObject childObject = Object.Instantiate<GameObject>(Plugin.shotgunTrumpetHorn);
             childObject.transform.SetParent(parentModel);
             childObject.transform.localPosition = Vector3.zero;
-            childObject.transform.localRotation = Quaternion.identity;
+            childObject.transform.localRotation = Quaternion.Euler(-90f, 40f, 0f);
         }
 
         private static void CreateTrumpetBarrelAndParentTo(Transform parentModel)
         {
             GameObject childObject = Object.Instantiate<GameObject>(Plugin.shotgunTrumpetBarrel);
             childObject.transform.SetParent(parentModel);
-            childObject.transform.localPosition = Vector3.zero;
-            childObject.transform.localRotation = Quaternion.identity;
+            childObject.transform.localPosition = new Vector3(-0.075f, 0f, 0f);
+            childObject.transform.localRotation = Quaternion.Euler(-90f, 0f, 0f);
         }
     }
 }

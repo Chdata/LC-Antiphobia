@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Chdata\'s Antiphobia Mod")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85817cc5a53faba7f10ff715bb1f6d78d3382900")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5203468643fa97fc525f54f30b1c105687eaa977")]
 [assembly: System.Reflection.AssemblyProductAttribute("Antiphobia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Antiphobia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

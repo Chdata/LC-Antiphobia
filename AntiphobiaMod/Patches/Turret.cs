@@ -16,34 +16,67 @@ namespace AntiphobiaMod.Patches
                 return;
             }
 
-            Plugin.Logger.LogInfo("--=== Fixing Turret... ===--");
+            var t1 = __instance;
+            var t2 = __instance.gameObject;
+            var t3 = __instance.gameObject.transform;
+
+            Plugin.Logger.LogInfo($"--=== Fixing Turret 1 - " +
+                $"\n1: {t1} " +
+                $"\n2: {t2} " +
+                $"\n3: {t3} " +
+                $"\n4: {__instance.gameObject.transform.Find("MeshContainer")} " +
+                $"\n5: {__instance.gameObject.transform.parent}" +
+                $"\n5: {__instance.gameObject.transform.parent.Find("MeshContainer")}" +
+                $"\n0: The end " +
+                $"... ===--");
 
             Plugin.turretModeLastFrameDict.Add(__instance.NetworkObjectId, TurretMode.Detection);
             Plugin.turretBerserkTimerDict.Add(__instance.NetworkObjectId, 0f);
             Plugin.turretEnteringBerserkModeDict.Add(__instance.NetworkObjectId, false);
 
-            Transform turretGunBody = __instance.gameObject.transform.Find("MeshContainer").Find("RotatingRodContainer").Find("Rod").Find("GunBody");
+            Plugin.Logger.LogInfo("--=== Fixing Turret 2... ===--");
+
+            Transform turretGunBody = __instance.gameObject.transform.parent.Find("MeshContainer").Find("RotatingRodContainer").Find("Rod").Find("GunBody");
+
+            Plugin.Logger.LogInfo("--=== Fixing Turret 3... ===--");
 
             if (turretGunBody == null)
             {
                 Plugin.Logger.LogInfo("--=== Failed Turret... ===--");
             }
 
+            Plugin.Logger.LogInfo("--=== Fixing Turret 4... ===--");
+
             turretGunBody.GetComponent<MeshRenderer>().enabled = false;
             turretGunBody.Find("Magazine").GetComponent<MeshRenderer>().enabled = false;
 
             // Make the shotgun trails invisible, but still active (for collision)
             ParticleSystem gunParticles = turretGunBody.Find("GunBarrelPos").Find("BulletParticle").GetComponent<ParticleSystem>();
+
+            if (gunParticles == null)
+            {
+                Plugin.Logger.LogInfo("--=== Failed Turret Particles... ===--");
+            }
+
+
             var trailRenderer = gunParticles.trails;
             trailRenderer.enabled = false;
 
             // Hide the muzzle flash without deleting it (I don't know a better way)
             ParticleSystem flareParticles = turretGunBody.Find("GunBarrelPos").Find("BulletParticle").Find("BulletParticleFlare").GetComponent<ParticleSystem>();
+
+            if (flareParticles == null)
+            {
+                Plugin.Logger.LogInfo("--=== Failed Flared Particles... ===--");
+            }
+             
             var flareRenderer = flareParticles.sizeOverLifetime;
 
             AnimationCurve curve = new();
             curve.AddKey(0.0f, 0.0f);
             flareRenderer.size = new ParticleSystem.MinMaxCurve(0.0f, curve);
+
+            Plugin.Logger.LogInfo("--=== Fixing Turret 5... ===--");
 
             CreateBasscannonAndParentTo(turretGunBody);
 
@@ -55,8 +88,9 @@ namespace AntiphobiaMod.Patches
             GameObject childObject = Object.Instantiate<GameObject>(Plugin.turretBasscannon);
             childObject.transform.SetParent(parentModel);
             childObject.transform.localPosition = Vector3.zero;
-            childObject.transform.localRotation = Quaternion.identity;
-            //childObject.transform.Find("roar").GetComponent<ParticleSystem>();
+            childObject.transform.localRotation = Quaternion.Euler(-90f, -90f, 0f);
+
+            Plugin.Logger.LogInfo($"--=== Basscannon: {childObject.transform.Find("roar").GetComponent<ParticleSystem>()} - ");
         }
 
         [HarmonyPatch(typeof(Turret), "Update")]
