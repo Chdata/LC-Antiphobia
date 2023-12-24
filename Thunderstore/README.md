@@ -3,8 +3,8 @@
 
 # Features:
 - Fixed Arachnophobia Mode (Removes the spider's fangs floating with the text)
-- Trypophobia Mode (Fear or disgust of a pattern of holes - replaced texture on Circuit Beehive)
-- Hoplophobia Mode (Fear of firearms - replaced turrets and shotguns)
+- Trypophobia Mode (Fear or disgust of a pattern of holes - replaces texture on Circuit Beehive)
+- Hoplophobia Mode (Severe anxiety towards firearms - replaces turrets and shotguns)
 
 # Installation Instructions
 Use your favorite mod manager to install!
