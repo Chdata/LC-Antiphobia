@@ -1,6 +1,6 @@
 {
   "name": "AntiphobiaMod",
-  "version_number": "1.0.4",
+  "version_number": "1.0.5",
   "website_url": "https://github.com/Chdata/LC-Antiphobia",
   "description": "Replaces sounds and graphics in the game for various phobias. Tags: Trypophobia, Hoplophobia, Arachnophobia, Epilepsy Modes: Adds Trumpts, Basscannons, Popcorn",
   "dependencies": [

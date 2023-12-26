@@ -43,11 +43,13 @@ I plan to develop this to a certain point that will hopefully work without needi
 
 # FAQ:
 Q. Will you add X phobia mode?
+
 A. Tell me about it on Discord in the unofficial Lethal Company modding community, and I will consider it.
 
 I probably won't do it though. I need to move on to other mods with my limited free time.
 
 Q. Why no Melissophobia Mode?
+
 A. I wanted add it, but I couldn't figure out how to change the bee's graphics through mods.
 
 # Known Bugs:
@@ -58,8 +60,14 @@ A. I wanted add it, but I couldn't figure out how to change the bee's graphics t
 Thanks to the Lethal Company Modding Discord for teaching me the ropes!
 https://discord.gg/v5t3KkEdsv
 
-Thanks to Charlie Tinley for the trumpet model!
+Thanks to `Charlie Tinley` for the trumpet model!
 https://sketchfab.com/3d-models/trumpet-3f2d4f5b962340b2933012e1bc634d88
+
+Thanks to `majdsalman` for the popcorn model!
+https://sketchfab.com/3d-models/popcorn-c2612dddc7034e1b9b590c8cd85a92b5
+
+	- v1.0.5
+		- Update Readme
 
 	- v1.0.4
 		- Added Epilepsy Mode and fixed the Popcorn Beehive model.
