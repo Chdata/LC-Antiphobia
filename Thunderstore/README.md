@@ -1,10 +1,15 @@
 # LC-Antiphobia
  Chdata's Antiphobia Mod for Lethal Company
 
+ It's a client-side replacement that changes shotguns into trumpets, turrets into basscannons, and beehives into popcorn.
+
+ There is also a nice setting for those with Epilepsy to turn off the spinning fan in the start room.
+
 # Features:
 - Fixed Arachnophobia Mode (Removes the spider's fangs floating with the text)
-- Trypophobia Mode (Fear or disgust of a pattern of holes - replaces texture on Circuit Beehive with wood or replaces the model with popcorn)
+- Trypophobia Mode (Fear or disgust of a pattern of holes - replaces Circuit Beehive texture with wood or replaces the model with popcorn)
 - Hoplophobia Mode (Severe anxiety towards firearms - replaces turrets and shotguns with basscannons and trumpets)
+- Epilepsy Mode (Disables the fan in the start room from spinning. It also removes the basscannon's particle effects.)
 
 Check out the preview videos!
 
@@ -47,6 +52,7 @@ A. I wanted add it, but I couldn't figure out how to change the bee's graphics t
 
 # Known Bugs:
 - I removed the Bunker Spider's fangs outside of Arachnophobia Mode too.
+- The Basscannon's particles don't always match up with the Turret's bullets (which are just invisible)
 
 # Credits
 Thanks to the Lethal Company Modding Discord for teaching me the ropes!
@@ -54,6 +60,9 @@ https://discord.gg/v5t3KkEdsv
 
 Thanks to Charlie Tinley for the trumpet model!
 https://sketchfab.com/3d-models/trumpet-3f2d4f5b962340b2933012e1bc634d88
+
+	- v1.0.4
+		- Added Epilepsy Mode and fixed the Popcorn Beehive model.
 
 	- v1.0.3
 		- Update Readme

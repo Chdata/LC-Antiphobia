@@ -29,7 +29,7 @@ namespace AntiphobiaMod.Patches
                 case 2:
                 {
                     CreatePopcornAndParentTo(__instance.hive.transform);
-                    __instance.hive.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    __instance.hive.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
                     Plugin.Logger.LogInfo("--=== Changed to Popcorn! ===--");
                     break;
                 }
@@ -44,10 +44,28 @@ namespace AntiphobiaMod.Patches
             childObject.transform.localRotation = Quaternion.identity;
         }
 
-        // private static void SetupMelissophobiaMode(RedLocustBees theBees)
-        // {
-        // VisualEffect component -> VisualEffect.visualEffectAsset --> 
-        // VFXRenderer -> .SetMaterials
-        // }
+        [HarmonyPatch(typeof(GrabbableObject), "EquipItem")]
+        [HarmonyPostfix]
+        public static void OnBeehiveEquipItem(GrabbableObject __instance)
+        {
+            HideBeehiveGraphics(__instance);
+        }
+
+        [HarmonyPatch(typeof(GrabbableObject), "DiscardItem")]
+        [HarmonyPostfix]
+        public static void OnBeehiveDiscardItem(GrabbableObject __instance)
+        {
+            HideBeehiveGraphics(__instance);
+        }
+
+        private static void HideBeehiveGraphics(GrabbableObject theHive)
+        {
+            if (theHive.itemProperties.itemName != "Hive")
+            {
+                return;
+            }
+
+            theHive.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
+        }
     }
 }

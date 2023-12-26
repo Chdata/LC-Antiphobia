@@ -25,6 +25,7 @@ namespace AntiphobiaMod
         public static ConfigEntry<bool> configHoplophobiaShotgunMode;
         //public static ConfigEntry<bool> configMelissophobiaMode;
         public static ConfigEntry<int> configTrypophobiaMode;
+        public static ConfigEntry<bool> configEpilepsyMode;
 
         public static AssetBundle antiphobiaAssetBundle;
 
@@ -61,6 +62,7 @@ namespace AntiphobiaMod
             configHoplophobiaShotgunMode = Config.Bind("Settings", "Hoplophobia Mode Shotgun", true, "If true, replaces Shotgun with Trumpet.");
             //configMelissophobiaMode = Config.Bind("Settings", "Melissophobia Mode", true, "If true, replaces the Circuit Bees with Circuit B's.");
             configTrypophobiaMode = Config.Bind("Settings", "Trypophobia Mode", 2, "0 = Disabled, 1 = replace texture, 2 = popcorn. Replaces the Circuit Bee Hive.");
+            configEpilepsyMode = Config.Bind("Settings", "Epilepsy Mode", false, "If true, stops the fan from spinning in the Bunker Facility Start Room. It also disables the Basscannon particle effects.");
 
             LoadAssets();
 
@@ -165,7 +167,7 @@ namespace AntiphobiaMod
 
         [HarmonyPatch(typeof(RoundManager), nameof(RoundManager.LoadNewLevel))]
         [HarmonyPostfix]
-        static void OnLoadNewLevel(ref SelectableLevel newLevel)
+        static void OnLoadNewLevel() // ref SelectableLevel newLevel
         {
             Logger.LogInfo("Client is host: " + RoundManager.Instance.IsHost);
 
@@ -173,6 +175,8 @@ namespace AntiphobiaMod
             turretBerserkTimerDict.Clear();
             turretEnteringBerserkModeDict.Clear();
             basscannonParticleDict.Clear();
+
+            RoundManager.Instance.StartCoroutine(BunkerInterior.PatchStartRoom());
         }
     }
 }

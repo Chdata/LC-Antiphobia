@@ -98,6 +98,11 @@ namespace AntiphobiaMod.Patches
                 return;
             }
 
+            if (Plugin.configEpilepsyMode.Value)
+            {
+                return;
+            }
+
             if (!__instance.turretActive)
             {
                 return;
