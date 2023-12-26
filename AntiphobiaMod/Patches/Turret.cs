@@ -98,7 +98,7 @@ namespace AntiphobiaMod.Patches
                 return;
             }
 
-            if (Plugin.configEpilepsyMode.Value)
+            if (!Plugin.configBasscannonParticles.Value)
             {
                 return;
             }

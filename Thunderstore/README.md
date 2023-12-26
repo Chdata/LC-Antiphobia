@@ -9,7 +9,7 @@
 - Fixed Arachnophobia Mode (Removes the spider's fangs floating with the text)
 - Trypophobia Mode (Fear or disgust of a pattern of holes - replaces Circuit Beehive texture with wood or replaces the model with popcorn)
 - Hoplophobia Mode (Severe anxiety towards firearms - replaces turrets and shotguns with basscannons and trumpets)
-- Epilepsy Mode (Disables the fan in the start room from spinning. It also removes the basscannon's particle effects.)
+- Epilepsy Mode (Disables the fan in the start room from spinning)
 
 Check out the preview videos!
 
@@ -65,6 +65,9 @@ https://sketchfab.com/3d-models/trumpet-3f2d4f5b962340b2933012e1bc634d88
 
 Thanks to `majdsalman` for the popcorn model!
 https://sketchfab.com/3d-models/popcorn-c2612dddc7034e1b9b590c8cd85a92b5
+
+	- v1.0.8
+		- Added Config Settings to turn off the Basscannon's particles.
 
 	- v1.0.4
 		- Added Epilepsy Mode and fixed the Popcorn Beehive model.
