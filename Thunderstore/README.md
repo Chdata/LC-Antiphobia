@@ -66,20 +66,11 @@ https://sketchfab.com/3d-models/trumpet-3f2d4f5b962340b2933012e1bc634d88
 Thanks to `majdsalman` for the popcorn model!
 https://sketchfab.com/3d-models/popcorn-c2612dddc7034e1b9b590c8cd85a92b5
 
-	- v1.0.5
-		- Update Readme
-
 	- v1.0.4
 		- Added Epilepsy Mode and fixed the Popcorn Beehive model.
 
-	- v1.0.3
-		- Update Readme
-
 	- v1.0.2
 		- Added Basscannon Turret and Nutcracker Trumpets for Hoplophobia Mode
-
-	- v1.0.1
-		- Update Readme
 
 	- v1.0.0
 		- Release
