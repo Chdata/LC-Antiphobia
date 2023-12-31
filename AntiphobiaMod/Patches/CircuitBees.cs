@@ -60,6 +60,11 @@ namespace AntiphobiaMod.Patches
 
         private static void HideBeehiveGraphics(GrabbableObject theHive)
         {
+            if (Plugin.configTrypophobiaMode.Value != 2)
+            {
+                return;
+            }
+
             if (theHive.itemProperties.itemName != "Hive")
             {
                 return;

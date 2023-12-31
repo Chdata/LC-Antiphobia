@@ -66,7 +66,6 @@ namespace AntiphobiaMod
             configEpilepsyMode = Config.Bind("Settings", "Epilepsy Mode", false, "If true, stops the fan from spinning in the Bunker Facility Start Room.");
             configBasscannonParticles = Config.Bind("Settings", "Basscannon Particles", true, "If false, it disables the Basscannon particle effects in Hoplophobia Mode.");
 
-
             LoadAssets();
 
             harmony.PatchAll(typeof(Plugin));

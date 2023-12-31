@@ -15,7 +15,7 @@ namespace AntiphobiaMod.Patches
 
             // if (!Plugin.configFixArachnophobiaMode.Value)
             // {
-            //     return;
+            //     return; // SandSpiderAI.spiderSafeEnabled
             // }
 
             Plugin.Logger.LogInfo("--=== Fixing Bunker Spider... ===--");
